@@ -10,9 +10,6 @@ RUN pip install uv && uv sync --frozen
 # Copy app code
 COPY . .
 
-# DON'T run migrations during build - do it at runtime instead
-# RUN uv run alembic upgrade head  # ❌ Remove this line
-
 # Expose port
 EXPOSE 8000
 
